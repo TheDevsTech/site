@@ -35,4 +35,6 @@ workflows:
       - build:
           filters:
             branches:
-              only: /(master)/
+              only:
+                - develop
+                - master
