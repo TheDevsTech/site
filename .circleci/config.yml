@@ -31,13 +31,13 @@ jobs:
       # SSH config
       - add_ssh_keys:
           fingerprints:
-            - "${SSH_FINGERPRINT}"
+            - "$SSH_FINGERPRINT"
 
       - run:
           name: Deploy static files over SSH
           command: |
-            rsync -a -e 'ssh -p ${SSH_PORT} -o StrictHostKeyChecking=no' --progress --delete \
-            $HUGO_BUILD_DIR ${SSH_ADDRESS}:/var/www/alphas/ \
+            rsync -a -e 'ssh -p $SSH_PORT -o StrictHostKeyChecking=no' --progress --delete \
+            $HUGO_BUILD_DIR $SSH_ADDRESS:/var/www/alphas/ \
             --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore
 
 workflows:
