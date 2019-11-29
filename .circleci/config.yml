@@ -28,6 +28,18 @@ jobs:
       #       htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
       #       --empty-alt-ignore --disable-external
 
+      # SSH config
+      - add_ssh_keys:
+          fingerprints:
+            - "${SSH_FINGERPRINT}"
+
+      - run:
+          name: Deploy static files over SSH
+          command: |
+            rsync -a -e 'ssh -p ${SSH_PORT} -o StrictHostKeyChecking=no' --progress --delete \
+            $HUGO_BUILD_DIR ${SSH_ADDRESS}:/var/www/alphas/ \
+            --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore
+
 workflows:
   version: 2
   build-and-deploy:
