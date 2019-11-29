@@ -1,0 +1,4 @@
+baseURL = "https://www.devstech.dev/"
+languageCode = "en-us"
+title = "The Devs Tech"
+theme = "ananke"
