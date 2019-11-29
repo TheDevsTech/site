@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:0.60
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+      # install git
+      - run: apt-get -qq update && apt-get install git rsync
+
+      # checkout the repository
+      - checkout
+
+      # # install git submodules for managing third-party dependencies
+      - run: git submodule sync && git submodule update --init
+
+      # # build with Hugo
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+
+      # temp turn off for this:
+      # https://github.com/gohugoio/hugo/issues/622
+      #
+      # - run:
+      #     name: test generated HTML files
+      #     command: |
+      #       htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+      #       --empty-alt-ignore --disable-external
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: /(master)/
