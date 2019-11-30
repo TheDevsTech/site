@@ -1,4 +1,4 @@
-baseURL = "https://www.devstech.dev"
+baseURL = "https://alpha.devstech.dev"
 languageCode = "en-us"
 title = "The Devs Tech"
 theme = "ananke"
