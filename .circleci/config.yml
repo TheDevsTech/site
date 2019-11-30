@@ -17,7 +17,7 @@ jobs:
       - run: git submodule sync && git submodule update --init
 
       # # build with Hugo
-      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: HUGO_ENV=production hugo -vD -d $HUGO_BUILD_DIR
 
       # temp turn off for this:
       # https://github.com/gohugoio/hugo/issues/622
