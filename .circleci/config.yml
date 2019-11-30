@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Deploy static files over SSH
           command: |
-            rsync -va -e 'ssh -p 10022 -o StrictHostKeyChecking=no' --progress --delete \
+            rsync -vaO -e 'ssh -p 10022 -o StrictHostKeyChecking=no' --progress --delete \
             $HUGO_BUILD_DIR/ $SSH_ADDRESS:/var/www/alpha/ \
             --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore
 
