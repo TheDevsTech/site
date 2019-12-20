@@ -8,7 +8,7 @@ jobs:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
       # install git
-      - run: apt-get -qq update && apt-get install git rsync
+      - run: apt-get -qq update && apt-get install git rsync -y
 
       # checkout the repository
       - checkout
