@@ -2,7 +2,8 @@
 title: "Easy Continuous Delivery for Meteor app with GitLab + Heroku"
 date: 2019-11-30T14:10:00+06:00
 draft: true
-author: Anisuzzaman Khan
+authors:
+- Anisuzzaman Khan
 categories:
 - CI-CD
 - Continuous Delivery

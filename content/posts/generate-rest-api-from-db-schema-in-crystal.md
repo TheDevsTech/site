@@ -2,7 +2,8 @@
 title: "Generate REST API from DB Schema in Crystal"
 date: 2019-02-23T14:10:00+06:00
 draft: true
-author: Mazhar Ahmed
+authors:
+- Mazhar Ahmed
 tags:
 - crystal
 - haskell

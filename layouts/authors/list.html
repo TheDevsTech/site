@@ -18,9 +18,6 @@
         {{ .Summary | truncate 200 }}
         <a href="{{ .Permalink }}">Read more</a>
     </p>
-    <p class="byline">
-        by {{ .Render "author-link" }}
-    </p>
 </article>
 {{ end }}
 
