@@ -6,6 +6,8 @@ author: Mazhar Ahmed
 tags:
 - crystal
 - haskell
+categories:
+- REST API
 ---
 
 I had a MySQL schema from a booking.com like platform. I wanted to generate REST API very fast from my MySQL database tables. Like I have a table named `hotels`. I want to generate following endpoints:
