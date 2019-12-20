@@ -59,6 +59,7 @@ uglyURLs = false
 [taxonomies]
     category = "categories"
     tag = "tags"
+    author = "authors"
 
 # Modified date
 [frontmatter]
@@ -77,6 +78,18 @@ uglyURLs = false
     # Disable some Blackfriday’s Markdown extensions
     extensionsmask = ["hardLineBreak", "backslashLineBreak"]
 
+# Author’s information
+[author]
+    # Name
+    name = "The Devs Tech"
+    # Email
+    email = "hello@devstech.dev"
+    # Motto or introduction
+    motto = "Awesome Techs"
+    # Avatar
+    avatar = "/icons/apple-touch-icon.png"
+    # Personal website, default: baseURL
+    twitter = "devstech"
 
 # Related content
 [related]
@@ -656,7 +669,7 @@ uglyURLs = false
     #       Unit: em
 
     # Is the post original?
-    original = true
+    # original = true
     # Note: will affect the author and
     #       copyright information of the
     #       post

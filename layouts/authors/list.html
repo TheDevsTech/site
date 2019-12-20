@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<h1>{{ .Params.name }}</h1>
+{{- with .Params.photo }}
+<figure class="author-portrait">
+    <img src="{{ . }}" alt="">
+</figure>
+{{ end }}
+
+<h2>Bio</h2>
+{{ .Content }}
+
+<h2>Articles</h2>
+{{ range .Data.Pages }}
+<article>
+    <h3><a href="{{ .Permalink }}" class="block-link">{{ .Title }}</a></h3>
+    <p>
+        {{ .Summary | truncate 200 }}
+        <a href="{{ .Permalink }}">Read more</a>
+    </p>
+    <p class="byline">
+        by {{ .Render "author-link" }}
+    </p>
+</article>
+{{ end }}
+
+{{ end }}

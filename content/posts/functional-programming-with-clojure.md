@@ -2,7 +2,8 @@
 title: "Functional Programming with Clojure"
 date: 2019-12-09T14:10:00+06:00
 draft: true
-author: Mazhar Ahmed
+authors:
+- Mazhar Ahmed
 tags:
 - functional
 - clojure
