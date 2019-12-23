@@ -16,9 +16,49 @@ is an awesome functional programming language. It's said that it is Lisp for JVM
 There is another amazing fact of Clojure, you have to write everything in Prefix basis.
 
 ```clojure
-;; that means if you want to write (a + b) - (a + c)
-;; what you have to write is:
+; that means if you want to write (a + b) - (a + c)
+; what you have to write is:
 - (+ a b) (+ a c)
+```
+
+Clojure is written in "forms", which are just lists of things inside parentheses, separated by whitespace. The clojure reader assumes that the first thing is a function or macro to call, and the rest are arguments.
+
+The first thing you want to do in Clojure is define a namespace. To do that use keyword `ns`. Let's define a namespace named devstech:
+
+```clojure
+(ns devstech)
+```
+
+The next thing you want to learn is how to print a line. In clojure, we just simply use `str` to output string. `str` will print all of its parameters. Let's print `Hello DevsTech`:
+
+```clojure
+(str "Hello" " " "DevsTech")
+```
+
+The third thing you want to learn is how to comment. In clojure we use `;` to comment. Yes, you heard it right.
+
+```clojure
+; this is a comment
+```
+
+We can use mathmatical, logical expressions just like other languages. The only diffrence is we need to write in prefix order.
+
+```clojure
+; mathmatical statements
+(+ 9 90) ; that means 9 + 90 the result is 99
+(- 100 1) ; that means 100 - 1 the result is 99
+(* 11 9) ; that means 11 * 9 the result is 99
+(/ 99 99) ; that means 99 / 99 the result is 1
+
+; logical statements (we use = not == like other languages)
+(= 1 1) ; that means 1 == 1 the result is true
+(= 2 1) ; that means 2 == 1 the result is false
+
+; not operator
+(not true) ; that means !true the result is false
+
+; Nesting forms works as you expect
+(+ 1 (- 3 2)) ; that means 1 + (3 - 2) which is 2
 ```
 
 > continue
