@@ -1,5 +1,5 @@
 ---
-title: "Functional Programming with Clojure"
+title: "Functional Programming with Clojure: Part 1"
 date: 2019-12-09T14:10:00+06:00
 draft: true
 authors:
@@ -74,8 +74,8 @@ Branching statements are also similar to other languages but in prefix order:
 
 ```clojure
 ; Actually if is just like macro in clojure
-(if false "a" "b") ; => will output "b"
-(if false "a") ; => will output nil
+(if false "a" "b") ; => will return "b"
+(if false "a") ; => will return nil
 (if (< 1 2) "true" "false") ; it will output true as 1 < 2 is true
 
 ; if you want elseif just make branch of nested if
@@ -88,5 +88,77 @@ Branching statements are also similar to other languages but in prefix order:
 )
 ```
 
+Loop is also a little bit tricky like (keep in mind that `do` does not loop, it only groups statements):
 
-> continue
+```clojure
+(loop [x 10]
+  (when (> x 1)
+    (println x)
+    (recur (- x 2))))
+; => 10 8 6 4 2
+
+(for [x [0 1 2 3 4 5]
+      :let [y (* x 3)]
+      :when (even? y)]
+  y)
+; => (0 6 12)
+
+(for [x (range 1 6) 
+      :let [y (* x x) 
+            z (* x x x)]] 
+  [x y z])
+; => ([1 1 1] [2 4 8] [3 9 27] [4 16 64] [5 25 125])
+```
+
+And now the most important part of functional programming. How to define functions. We use `fn`, `def` and `defn` to define functions. Let's define some functions.
+
+```clojure
+; Use fn to create new functions. A function always returns
+; its last statement.
+(fn [] "Devs Tech") ; => fn
+
+; (You need extra parens to call it)
+((fn [] "Devs Tech")) ; => "Devs Tech"
+
+; You already know declaring a var using def
+(def x 1)
+x ; => 1
+
+; Assign a function to a var, you know, just like js
+(def devstech (fn [] "Devs Tech"))
+(devstech) ; => "Devs Tech"
+
+; You can shorten this process by using defn
+(defn devstech [] "Devs Tech")
+
+; The [] is the list of arguments for the function.
+(defn devs [name]
+  (str "Devs " name))
+(hello "Tech") ; => "Devs Tech"
+
+; You can also use this shorthand to create functions:
+(def devs2 #(str "Devs " %1))
+(devs2 "Tech") ; => "Devs Tech"
+
+; You can have multi-variadic functions, too
+(defn devs3
+  ([] "Devs Tech")
+  ([name] (str "Devs " name)))
+(devs3 "Mazhar") ; => "Devs Mazhar"
+(devs3) ; => "Devs Tech"
+
+; Functions can pack extra arguments up in a seq for you
+(defn count-args [& args]
+  (str "You passed " (count args) " args: " args))
+(count-args 1 2 3) ; => "You passed 3 args: (1 2 3)"
+
+; You can mix regular and packed arguments
+(defn devs-count [name & args]
+  (str "Hi " name ", you passed " (count args) " extra args"))
+(devs-count "Mazhar" 1 2 3)
+; => "Hi Mazhar, you passed 3 extra args"
+```
+
+I will not make this part any longer. Let's close this article and continue in Part 2. In Part 2 we will see more clojure way of writing programs.
+
+To be continued.
