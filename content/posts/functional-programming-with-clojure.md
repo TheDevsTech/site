@@ -61,4 +61,32 @@ We can use mathmatical, logical expressions just like other languages. The only 
 (+ 1 (- 3 2)) ; that means 1 + (3 - 2) which is 2
 ```
 
+Defining variable is easy. We use `def` to define variables and `let` to create temporary bindings. But `let` only works on its own scope where `def` works everywhere like:
+
+```clojure
+(def n 10)
+(let [a 1 b 2]
+    (str a " " b)
+)
+```
+
+Branching statements are also similar to other languages but in prefix order:
+
+```clojure
+; Actually if is just like macro in clojure
+(if false "a" "b") ; => will output "b"
+(if false "a") ; => will output nil
+(if (< 1 2) "true" "false") ; it will output true as 1 < 2 is true
+
+; if you want elseif just make branch of nested if
+(if (= a 1)
+    "a is 1"
+    (if (= a 2)
+        "a is 2"
+        "a is something else"
+    )
+)
+```
+
+
 > continue
