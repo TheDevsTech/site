@@ -3,7 +3,7 @@ title: "Rest Api 101"
 date: 2019-12-27T16:17:50+06:00
 draft: true
 authors:
-- Ashraful Islam Nixon
+- Nixon
 tags:
 - REST
 - API
