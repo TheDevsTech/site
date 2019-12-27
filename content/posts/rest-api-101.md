@@ -16,9 +16,6 @@ categories:
 - REST API
 ---
 
-
-# REST API 101
-
 ## So what is an API:
 Formal answer is : An **application programming interface** (**API**) is an interface or communication between different parts of a computer program intended to simplify the implementation and maintenance of software. [link](https://en.wikipedia.org/wiki/Application_programming_interface)
 
