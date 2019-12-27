@@ -6,5 +6,4 @@ linkedin: '@nixon1333'
 facebook: '@nixon1333'
 instagram: '@nixon1333'
 ---
-Ashraful Islam Nixon
 Problem Solver. Git Chef. Devoted Web Practitioner. Evil Analyst. Algorithm Freak. Food fanatic.  
