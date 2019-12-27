@@ -3,7 +3,7 @@
 <h1>{{ .Params.name }}</h1>
 {{- with .Params.photo }}
 <figure class="author-portrait">
-    <img src="{{ .Params.photo }}" alt="">
+    <img src="{{ . }}" alt="">
 </figure>
 {{ end }}
 
