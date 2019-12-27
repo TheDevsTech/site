@@ -28,9 +28,10 @@ Through API(s) softwares can talk, take actions, make interactions in between th
 Programming languages, client libraries all may have api which can be comsumed/extended by the consumers(developers, third party applications). But for today we will discuss API on top of HTTP only.
 
 There are lots of APIs on HTTP. Like,
-* RPC (Remote Proccedure Call) [Resource 1](https://en.wikipedia.org/wiki/XML-RPC) [Resource 2](https://en.wikipedia.org/wiki/JSON-RPC)
-* [REST (Representaional State Transfer)](https://en.wikipedia.org/wiki/Representational_state_transfer)
-* [SOAP (Simple Object Access Protocol)](https://en.wikipedia.org/wiki/SOAP)
+
+- RPC (Remote Proccedure Call) [Resource 1](https://en.wikipedia.org/wiki/XML-RPC) [Resource 2](https://en.wikipedia.org/wiki/JSON-RPC)
+- [REST (Representaional State Transfer)](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [SOAP (Simple Object Access Protocol)](https://en.wikipedia.org/wiki/SOAP)
 and more.
 
 # What makes an API RESTful:
@@ -74,6 +75,7 @@ To maintain this type of structure is very hard and time consuming. So most of t
 
 ### Core Elements:
 There are 3 core elements in REST which makes an API RESTful.
-1.**Resources** are the data model API providers wants to share via API. Like `User` model, `Wallet` model, `Players` model etc.
-2.**Operations** are the actions API consumers will do with the resources. Like `Create User`, `Delete Wallet Account`, `Get the List of Players` etc.
-3.**Representaions** are simply is what and how API consumers get to see the output of their actions. Like how the consumer will see the list of `Players` or what will be shown after an `User` being created/deleted. will the responses shown in json,xml or something else.
+
+1. **Resources** are the data model API providers wants to share via API. Like `User` model, `Wallet` model, `Players` model etc.
+2. **Operations** are the actions API consumers will do with the resources. Like `Create User`, `Delete Wallet Account`, `Get the List of Players` etc.
+3. **Representaions** are simply is what and how API consumers get to see the output of their actions. Like how the consumer will see the list of `Players` or what will be shown after an `User` being created/deleted. will the responses shown in json,xml or something else.
