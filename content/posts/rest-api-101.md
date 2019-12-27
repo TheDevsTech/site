@@ -29,7 +29,7 @@ Programming languages, client libraries all may have api which can be comsumed/e
 
 There are lots of APIs on HTTP. Like,
 
-- RPC (Remote Proccedure Call) [Resource 1](https://en.wikipedia.org/wiki/XML-RPC) [Resource 2](https://en.wikipedia.org/wiki/JSON-RPC)
+- RPC (Remote Proccedure Call) [Resource 1](https://en.wikipedia.org/wiki/XML-RPC), [Resource 2](https://en.wikipedia.org/wiki/JSON-RPC)
 - [REST (Representaional State Transfer)](https://en.wikipedia.org/wiki/Representational_state_transfer)
 - [SOAP (Simple Object Access Protocol)](https://en.wikipedia.org/wiki/SOAP)
 and more.
