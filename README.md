@@ -1,5 +1,5 @@
 # The Devs Tech [![CircleCI](https://circleci.com/gh/TheDevsTech/site.svg?style=svg)](https://circleci.com/gh/TheDevsTech/site)
-This repo holds the source code of our [The Devs Tech](https://www.devstech.dev/) blog
+This repo holds the source code of our [The Devs Tech](https://alpha.devstech.dev/) blog
 
 ## Development
 1. [Install hugo](https://gohugo.io/getting-started/installing/) on your favorite machine
