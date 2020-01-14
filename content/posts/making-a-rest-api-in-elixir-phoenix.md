@@ -78,7 +78,7 @@ Now run `mix run priv/repo/seeds.exs` to insert the seed data. Okay, now that we
 ```ex
 defmodule DevstechWeb.UserController do
     use DevstechWeb, :controller
-    alias Devstech.{Repo, Core.User}
+    alias Devstech.{Repo, User}
     
     def index(conn, _params) do
         users = Repo.all(User)
