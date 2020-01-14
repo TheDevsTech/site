@@ -98,10 +98,10 @@ Now let's map this controller with a URL. Let's modify the file `/lib/devstech_w
   end
 ```
 
-Now let's run the server and hit **http://localhost:4000/api/user**. Surely it will show an error saying it can not convert ecto entity to json. Let's make a new file at `/lib` named `jason_encoder.ex` with following:
+Now let's run the server and hit **http://localhost:4000/api/user**. Surely it will show an error saying it can not convert ecto entity to json. Let's make a new file at `/lib` named `jason_encoder.ex` (jason is not misspelled, it's the package name) with following:
 
 ```ex
-alias Devstech.Core.User
+alias Devstech.User
 
 # lib/jason_encoder.ex
 defimpl Jason.Encoder, for: User do
