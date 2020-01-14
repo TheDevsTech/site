@@ -36,7 +36,7 @@ defp deps do
 [
   ... 
   {:cowboy, "~> 1.0"},
-  {:plug_cowboy, “~> 1.0”}
+  {:plug_cowboy, "~> 1.0"}
 ]
 end
 ```
